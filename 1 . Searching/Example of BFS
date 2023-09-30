@@ -1,0 +1,43 @@
+Here's an example of a Breadth-First Search (BFS) traversal on a simple graph:
+
+```plaintext
+    1
+   / \
+  2   3
+ / \   \
+4   5   6
+```
+
+Starting from vertex 1, let's perform a BFS traversal:
+
+1. Start at vertex 1. It's the initial node, so we enqueue it.
+   Queue: [1]
+   Visited: [1]
+
+2. Dequeue the front of the queue, which is 1. Visit its neighbors (2 and 3) and enqueue them if they haven't been visited yet.
+   Queue: [2, 3]
+   Visited: [1, 2, 3]
+
+3. Dequeue the front of the queue, which is 2. Visit its neighbors (4 and 5) and enqueue them if they haven't been visited yet.
+   Queue: [3, 4, 5]
+   Visited: [1, 2, 3, 4, 5]
+
+4. Dequeue the front of the queue, which is 3. Visit its neighbor (6) and enqueue it if it hasn't been visited yet.
+   Queue: [4, 5, 6]
+   Visited: [1, 2, 3, 4, 5, 6]
+
+5. Dequeue the front of the queue, which is 4. There are no unvisited neighbors, so continue.
+   Queue: [5, 6]
+   Visited: [1, 2, 3, 4, 5, 6]
+
+6. Dequeue the front of the queue, which is 5. There are no unvisited neighbors, so continue.
+   Queue: [6]
+   Visited: [1, 2, 3, 4, 5, 6]
+
+7. Dequeue the front of the queue, which is 6. There are no unvisited neighbors, so continue.
+   Queue: []
+   Visited: [1, 2, 3, 4, 5, 6]
+
+8. The queue is now empty, and we've visited all nodes reachable from vertex 1. The BFS traversal is complete.
+
+The order of visiting vertices in BFS is 1, 2, 3, 4, 5, 6, following the breadth-first order, where we explore all the neighbors at a given depth level before moving deeper into the graph.
